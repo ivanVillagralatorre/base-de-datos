@@ -40,9 +40,13 @@ select d.dept_no,
        d.dnombre,
        d.loc,nvl(e.apellido,'vacio')as"integrantes"
 from emple e,depart d
-where e.dept_no=d.dept_no(+);
+where e.dept_no(+)=d.dept_no;
 
-
+select e.dept_no,
+       d.dnombre,
+       d.loc,nvl(e.apellido,'vacio')as"integrantes"
+from emple e,depart d
+where e.dept_no(+)=d.dept_no;
 
 
 

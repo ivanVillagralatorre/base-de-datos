@@ -82,6 +82,50 @@ from emple
 group by dept_no
 order by dept_no asc;
 
+--3
+
+select emp_no,dept_no,oficio
+from emple;
+
+select dept_no as "departamentos",count(emp_no) as "numero de empleados",oficio
+from emple
+group by oficio,dept_no;
+
+--4
+select dept_no,count(emp_no)
+from emple
+group by dept_no;
+
+select max(count(emp_no)) as "maximo por departamento"
+from emple
+group by dept_no;
+
+--5
+select dept_no,round(avg(salario*12)) as"salario medio"
+from emple
+group by dept_no
+having  max(salario*12) >25000
+order by dept_no;
+
+--6 
+select dept_no,round(max(salario)) as"salario medio"
+from emple
+group by dept_no;
+
+--7
+select count(emp_no) as"numero personas",oficio
+from emple
+group by oficio
+order by oficio desc;
+
+--8
+select id_jefe , min(salario * 12) as "peor pagado"
+from emple
+where id_jefe is not null
+group by id_jefe
+having min(salario *12)<=20000
+order by min(salario *12) desc ;
+
 
 
 
