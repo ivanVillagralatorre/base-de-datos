@@ -2,7 +2,7 @@
 -- Para activar buffer de salida, SÓLO hay que hacerlo una vez al comienzo de la sesión
 -- NO TIENE QUE FORMAR PARTE DEL CODIGO DEL BLOQUE
 --set serveroutput on
-
+set SERVEROUTPUT ON;
 -- EJERCICIO 1
 /* 
  Autor: ivan
